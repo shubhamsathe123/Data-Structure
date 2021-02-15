@@ -1,4 +1,7 @@
 package LinkedList;
+
+import java.util.Scanner;
+
 class Node
 {
 	int data;
@@ -31,6 +34,7 @@ class LinkedList
 	//logic to display the node values
 	public void display()
 	{
+		System.out.println("my list is");
 		Node n=head;
 		while(n.next!=null)
 		{
@@ -43,8 +47,17 @@ class LinkedList
 public class LinkedListCreation {
 	public static void main(String[] args) {
 		LinkedList l=new LinkedList();
-		l.insert(2);
-		l.insert(4);
+		//l.insert(2);
+		//l.insert(4);
+		Scanner s=new Scanner(System.in);
+		System.out.println("how many values you want to insert");
+		int no=s.nextInt();
+		System.out.println("enter the values");
+		for(int i=0;i<no;i++)
+		{
+			int value=s.nextInt();
+		     l.insert(value);
+		}
 		l.display();
 	}
 
