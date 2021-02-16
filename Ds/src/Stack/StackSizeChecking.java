@@ -6,8 +6,15 @@ class Mystack
 	int top=0;
 	public void push(int data)
 	{
+	  if(top==4)
+	  {
+		  System.out.println("stack is full");
+	  }
+	  else
+	  {
 		arr[top]=data;
 		top++;
+	  }
 	}
 	public void size()
 	{
@@ -42,6 +49,7 @@ public class StackSizeChecking {
 	m.push(2);
 	m.push(3);
 	m.push(4);
+	m.push(5);
 	m.size();
 	m.isEmpty();
     m.display();	
