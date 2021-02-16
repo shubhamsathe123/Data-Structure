@@ -14,6 +14,11 @@ class Stack
 	  top--;
 	  arr[top]=0;  
   }
+  public void peek()
+  {
+	  top--;
+	  System.out.println(arr[top]);
+  }
   public void display()
   {
 	  for(int i=0;i<arr.length;i++)
@@ -33,5 +38,6 @@ public class StackMethods {
 	s.display();
 	s.pop();
 	s.display();
+	s.peek();
  }
 }
