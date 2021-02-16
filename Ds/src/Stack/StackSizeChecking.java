@@ -21,16 +21,29 @@ class Mystack
 		   System.out.println(arr[i]);
 	   }
 	}
+	public void isEmpty()
+	{
+		if(top<=0)
+		{
+			System.out.println("is empty");
+		}
+		else
+		{
+			System.out.println("not empty");
+		}
+	}
 	
 }
 public class StackSizeChecking {
  public static void main(String[] args) {
 	Mystack m=new Mystack();
+	m.isEmpty();
 	m.push(1);
 	m.push(2);
 	m.push(3);
 	m.push(4);
 	m.size();
+	m.isEmpty();
     m.display();	
    
 //    m.isEmpty();
