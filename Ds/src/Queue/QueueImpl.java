@@ -2,7 +2,7 @@ package Queue;
 class Queues{
 	int que[]=new int[4];
 	int size=0;
-	int front;
+	int front=0;
 	int rear=0;
 	public void enqueue(int data)
 	{
@@ -10,12 +10,17 @@ class Queues{
 		rear++;
 		size++;
 	}
+	public void dequeue()
+	{
+      front++;
+      size--;
+	}
 	public void display()
 	{
 		System.out.println("queue is");
 		for(int i=0;i<size;i++)
 		{
-			System.out.print(que[i]+" ");
+			System.out.print(que[front+i]+" ");
 		}
 	}
 }
@@ -25,6 +30,10 @@ public class QueueImpl {
 	Queues q=new Queues();
 	q.enqueue(2);
 	q.enqueue(3);
+	q.enqueue(4);
+	q.enqueue(6);
+//	q.display();
+	q.dequeue();
 	q.display();
 	
 }
