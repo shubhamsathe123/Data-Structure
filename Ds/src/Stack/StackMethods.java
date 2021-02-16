@@ -9,6 +9,11 @@ class Stack
 	  arr[top]=data;
 	  top++;
   }
+  public void pop()
+  {
+	  top--;
+	  arr[top]=0;  
+  }
   public void display()
   {
 	  for(int i=0;i<arr.length;i++)
@@ -25,6 +30,8 @@ public class StackMethods {
 	s.push(3);
 	s.push(4);
 	s.push(5);
+	s.display();
+	s.pop();
 	s.display();
  }
 }
