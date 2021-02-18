@@ -7,12 +7,14 @@ class Queues{
 	public void enqueue(int data)
 	{
 		que[rear]=data;
-		rear++;
+		//rear++
+	    rear=(rear+1)%4;
 		size++;
 	}
 	public void dequeue()
 	{
-      front++;
+		//front++
+      front=(front+1)%4;
       size--;
 	}
 	public void display()
@@ -20,7 +22,12 @@ class Queues{
 		System.out.println("queue is");
 		for(int i=0;i<size;i++)
 		{
-			System.out.print(que[front+i]+" ");
+			System.out.print(que[(front+i)%4]+" ");
+		}
+		System.out.println("original array is");
+		for(int i=0;i<que.length;i++)
+		{
+			System.out.print(que[i]);
 		}
 	}
 }
